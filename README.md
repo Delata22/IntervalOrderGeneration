@@ -32,6 +32,22 @@ them. The method proves effective, enabling the generation of all orders **up to
 - A **two-step generation algorithm**: generate prototypes, then derive every
   interval order from them.
 
+## Code
+
+The implementation (Python, no external dependencies) lives alongside the report:
+
+- `interval_orders/` — core library: prototype generation (`proto_generator.py`),
+  matrix completion and order generation (`generator.py`), hat generation
+  (`hat_generator.py`), bit helpers (`bin_utils.py`).
+- `scripts/` — benchmarks and tests (`benchmark-*.py`, `test.py`).
+- `tree_generation/` — full and subset generation experiments.
+
+Run from the repository root, e.g.:
+
+```bash
+python -m scripts.test
+```
+
 ## Keywords
 
 poset, iposet, interval order, generation
